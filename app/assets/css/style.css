@@ -1,3 +1,69 @@
-.moo {
-    color: red;
+/*
+
+    purple: #B399D
+    light purple:  #CE9DD9
+
+*/
+body {
+    font-size: 26px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+a,button {
+    cursor: pointer;
+}
+
+button {
+    background: #B399D4;
+    color: white;
+
+    font-size: 26px;
+
+    border-radius: 4px;
+    padding: 4px 16px;
+
+    border-style: none;
+    border-color: #B399D4;
+
+    outline: none;
+}
+button:hover {
+    background: #CE9DD9;
+}
+
+a {
+    color: #B399D4;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.highlight {
+    background: #CE9DD9;
+}
+
+.center {
+    text-align: center;
+}
+
+.status-text {
+    margin-top: 20px;
+    color: #727272;
+    border-top: 2px solid #727272;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
 }
