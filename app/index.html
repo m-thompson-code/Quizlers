@@ -10,20 +10,38 @@
 </head>
 
 <body>
-    <div id="header">
+    <div id="top-section" class="hide">
         <a>View Highscores</a>
         <span id="timer">Time: __</span>
     </div>
 
     <div id="container">
-        <h1>Test test test</h1>
-        <h2>Test test test</h2>
-        <a>test test etst</a>
-        <button>moo</button>
-    </div>
+        <div id="intro" class="center">
+            <h1>Coding Quix Challenge</h1>
+            <p>Some text, gif is too fast, can't read it lol</p>
+            <button id="start">Start</button>
+        </div>
 
-    <div class="status-text">
-        Some status!
+        <div id="quiz" class="hide">
+            <h2 id="question">question</h2>
+            <button id="answer-1">answer 1</button><br>
+            <button id="answer-2">answer 2</button><br>
+            <button id="answer-3">answer 3</button><br>
+            <button id="answer-4">answer 4</button><br>
+            <div id="status-text" class="hide">Some status</div>
+        </div>
+
+        <div id="submit" class="hide">
+            <h1>All Done!</h1>
+            <span>Your final score is <span id="score">_</span></span>
+        </div>
+
+        <div id="highscores-container" class="hide">
+            <h1>Highscores</h1>
+            <div id="highscores"></div>
+            <button id="back">Back</button>
+            <button id="clear-highscores">Clear Highscores</button>
+        </div>
     </div>
 
     <script src="./assets/js/main.js">

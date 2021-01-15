@@ -27,6 +27,7 @@ button {
 
     outline: none;
 }
+
 button:hover {
     background: #CE9DD9;
 }
@@ -57,13 +58,27 @@ h2 {
     text-align: center;
 }
 
-.status-text {
+.hide {
+    display: none;
+}
+
+#status-text {
     margin-top: 20px;
     color: #727272;
     border-top: 2px solid #727272;
+    font-style: italic;
 }
 
-#header {
+#top-section {
     display: flex;
     justify-content: space-between;
+    padding: 2px 8px 30px;
+}
+
+#container {
+    padding: 0 20%;
+}
+
+#quiz > button {
+    margin-bottom: 4px;
 }
