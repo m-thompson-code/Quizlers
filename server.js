@@ -20,7 +20,7 @@ exports.createServer = () => {
         next();
     });
 
-    app.get("*", function(req, res) {
+    app.get("*", (req, res) => {
         let relativePath = req.originalUrl;
 
         if (!relativePath || relativePath === '/') {
