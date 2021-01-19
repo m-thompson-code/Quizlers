@@ -1,3 +1,5 @@
+'use strict';
+
 let timerValue = 60;
 
 let highscores = [];
@@ -174,11 +176,11 @@ function handleRenderingTimer() {
 }
 
 function renderQuiz() {
-    question = questions[currentQuestionIndex];
+    const question = questions[currentQuestionIndex];
 
     questionEle.innerText = question.text;
 
-    answers = question.answers;
+    const answers = question.answers;
 
     for (let i = 0; i < answers.length; i++) {
         const answerText = answers[i];
