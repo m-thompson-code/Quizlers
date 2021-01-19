@@ -1,3 +1,5 @@
+let timerValue = 60;
+
 let highscores = [];
 
 let correctAnswers = 0;
@@ -147,21 +149,28 @@ function endQuiz() {
 let timerInterval;
 
 function startTimer() {
+    // Reset timer (in seconds)
     timerValue = 60;
-    timerEle.innerText = 'Time: ' + timerValue;
+
+    handleRenderingTimer();
 
     clearInterval(timerInterval);
 
     timerInterval = setInterval(() => {
         timerValue -= 1;
 
-        if (timerValue <= 0) {
-            displaySubmitForm();
-            clearInterval(timerInterval);
-        }
-
-        timerEle.innerText = 'Time: ' + timerValue;
+        handleRenderingTimer();
     }, 1000);
+}
+
+function handleRenderingTimer() {
+    if (timerValue <= 0) {
+        displaySubmitForm();
+        clearInterval(timerInterval);
+        return;
+    }
+
+    timerEle.innerText = 'Time: ' + timerValue;
 }
 
 function renderQuiz() {
@@ -180,11 +189,17 @@ function renderQuiz() {
 function selectAnswer(index) {
     const question = questions[currentQuestionIndex];
 
+    // Handle if they got the right or wrong answer
     if (question.correctAnswerIndex === index) {
         correctAnswers += 1;
         setStatusText('Correct!');
     } else {
         setStatusText('Wrong!');
+
+        // 10 second penality for getting the wrong answer
+        timerValue -= 10;
+
+        handleRenderingTimer();
     }
 
     currentQuestionIndex += 1;
