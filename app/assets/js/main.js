@@ -315,7 +315,6 @@ clearHighscoresEle.onclick = () => {
 
 // Submit
 submitInitalsEle.onclick = () => {
-    console.log("test");
     const initals = initalsEle.value;
 
     submitScore(initals, correctAnswers);
